@@ -1,6 +1,8 @@
 class AuditsController < ApplicationController
   def create
-    @audit = Audit.create(audit_params)
+    @audit = Audit.new(audit_params)
+    @audit.get_html(audit_params[:url])
+    @audit.save
     render json: @audit
   end
 
