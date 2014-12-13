@@ -11,10 +11,20 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141213155217) do
+ActiveRecord::Schema.define(version: 20141213155400) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "audits", force: true do |t|
+    t.integer "page_id"
+    t.text    "page_content"
+    t.string  "keyword"
+    t.string  "title"
+    t.string  "meta_description"
+  end
+
+  add_index "audits", ["page_id"], name: "index_audits_on_page_id", using: :btree
 
   create_table "pages", force: true do |t|
     t.string  "path"
