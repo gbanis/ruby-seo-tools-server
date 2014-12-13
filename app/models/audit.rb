@@ -1,7 +1,12 @@
 class Audit < ActiveRecord::Base
 
+  def generate
+    get_html
+    self.save
+  end
 
-  def get_html(url)
-    self.page_content = HTTParty.get(url)
+  private
+  def get_html
+    self.page_content = HTTParty.get(self.url)
   end
 end
