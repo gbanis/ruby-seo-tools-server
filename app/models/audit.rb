@@ -1,12 +1,18 @@
 class Audit < ActiveRecord::Base
+  include Analyzer
 
   def generate
     @parsed_html = Nokogiri::HTML(set_raw_html)
     set_metrics
-    self.save
+    run_analysis
+    save
   end
 
   private
+
+  def run_analysis
+    analyze
+  end
 
   def set_metrics
     self.title = @parsed_html.title
