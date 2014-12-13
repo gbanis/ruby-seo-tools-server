@@ -18,7 +18,7 @@ ActiveRecord::Schema.define(version: 20141213155400) do
 
   create_table "audits", force: true do |t|
     t.string  "url"
-    t.text    "page_content"
+    t.text    "raw_html"
     t.string  "keyword"
     t.string  "title"
     t.string  "meta_description"
