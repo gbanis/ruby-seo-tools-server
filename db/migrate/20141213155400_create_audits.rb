@@ -2,7 +2,7 @@ class CreateAudits < ActiveRecord::Migration
   def change
     create_table :audits do |t|
       t.string :url
-      t.text :page_content
+      t.text :raw_html
       t.string :keyword
       t.string :title
       t.string :meta_description
