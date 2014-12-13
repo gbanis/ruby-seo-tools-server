@@ -6,12 +6,16 @@ gem 'rails', '4.2.0.beta2'
 
 gem 'rails-api'
 
-gem 'spring', :group => :development
-
-
 gem 'pg'
 
 gem 'arel', '6.0.0.beta2' # Using this because of problem with migration. More info here: http://stackoverflow.com/questions/27139007/cant-migrate-database-after-scaffold-section-2-2-ruby-on-rails-tutorial-michae
+
+group :development, :test do
+  gem 'dotenv-rails'
+  gem 'spring'
+  gem 'pry-rails'
+  gem 'rspec-rails'
+end
 
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.1.2'
