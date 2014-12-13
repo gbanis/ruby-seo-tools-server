@@ -17,24 +17,17 @@ ActiveRecord::Schema.define(version: 20141213155400) do
   enable_extension "plpgsql"
 
   create_table "audits", force: true do |t|
-    t.integer "page_id"
+    t.string  "url"
     t.text    "page_content"
     t.string  "keyword"
     t.string  "title"
     t.string  "meta_description"
-  end
-
-  add_index "audits", ["page_id"], name: "index_audits_on_page_id", using: :btree
-
-  create_table "pages", force: true do |t|
-    t.string  "path"
-    t.integer "website_id"
-  end
-
-  add_index "pages", ["website_id"], name: "index_pages_on_website_id", using: :btree
-
-  create_table "websites", force: true do |t|
-    t.string "domain"
+    t.boolean "path_good_length"
+    t.boolean "path_contains_keyword"
+    t.boolean "title_good_length"
+    t.boolean "title_contains_keyword"
+    t.boolean "meta_description_good_length"
+    t.boolean "meta_description_contains_keyword"
   end
 
 end
