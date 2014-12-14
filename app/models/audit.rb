@@ -3,18 +3,14 @@ class Audit < ActiveRecord::Base
 
   def generate
     @parsed_html = Nokogiri::HTML(set_raw_html)
-    set_metrics
-    run_analysis
+    set_data
+    analyze
     save
   end
 
   private
 
-  def run_analysis
-    analyze
-  end
-
-  def set_metrics
+  def set_data
     self.title = @parsed_html.title
     self.meta_description = @parsed_html.xpath("//meta[@name='description']/@content").first.value
   end
