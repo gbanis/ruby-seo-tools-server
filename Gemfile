@@ -15,7 +15,7 @@ group :development, :test do
   gem 'dotenv-rails'
   gem 'spring'
   gem 'pry-rails'
-  gem 'rspec-rails'
+  gem 'rspec-rails', '3.1.0'
   gem 'factory_girl_rails'
   gem 'faker'
 end
