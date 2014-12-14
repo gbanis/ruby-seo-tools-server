@@ -38,8 +38,11 @@ GEM
       tzinfo (~> 1.1)
     arel (6.0.0.beta2)
     builder (3.2.2)
+    codeclimate-test-reporter (0.4.3)
+      simplecov (>= 0.7.1, < 1.0.0)
     coderay (1.1.0)
     diff-lcs (1.2.5)
+    docile (1.1.5)
     dotenv (1.0.2)
     dotenv-rails (1.0.2)
       dotenv (= 1.0.2)
@@ -125,6 +128,11 @@ GEM
       rspec-mocks (~> 3.1.0)
       rspec-support (~> 3.1.0)
     rspec-support (3.1.2)
+    simplecov (0.9.1)
+      docile (~> 1.1.0)
+      multi_json (~> 1.0)
+      simplecov-html (~> 0.8.0)
+    simplecov-html (0.8.0)
     slop (3.6.0)
     spring (1.2.0)
     sprockets (2.12.3)
@@ -147,6 +155,7 @@ PLATFORMS
 
 DEPENDENCIES
   arel (= 6.0.0.beta2)
+  codeclimate-test-reporter
   dotenv
   dotenv-rails
   factory_girl_rails
