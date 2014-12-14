@@ -5,6 +5,10 @@ class AuditsController < ApplicationController
     render json: @audit
   end
 
+  def index
+    render json: Audit.all.first
+  end
+
   private
 
   def audit_params
