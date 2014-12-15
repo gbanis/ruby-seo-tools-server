@@ -6,5 +6,5 @@
 [![Dependency Status](https://img.shields.io/gemnasium/gbanis/ruby-seo-tools-server.svg?style=flat-square)](https://gemnasium.com/gbanis/ruby-seo-tools-server)
 
 
-Currently deployed at: http://ruby-seo-tools.herokuapp.com/
+Currently deployed at: api.rubyseotools.com
 

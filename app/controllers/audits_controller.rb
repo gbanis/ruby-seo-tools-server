@@ -6,7 +6,7 @@ class AuditsController < ApplicationController
   end
 
   def index
-    render json: Audit.all.first
+    render json: Audit.all.last
   end
 
   private
