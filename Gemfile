@@ -12,6 +12,8 @@ gem 'arel', '6.0.0.beta2' # Using this because of problem with migration. More i
 gem 'httparty'
 gem 'nokogiri'
 
+gem 'newrelic_rpm'
+
 group :development, :test do
   gem 'dotenv-rails'
   gem 'spring'

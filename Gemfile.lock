@@ -72,6 +72,7 @@ GEM
     minitest (5.4.3)
     multi_json (1.10.1)
     multi_xml (0.5.5)
+    newrelic_rpm (3.9.8.273)
     nokogiri (1.6.5)
       mini_portile (~> 0.6.0)
     pg (0.17.1)
@@ -161,6 +162,7 @@ DEPENDENCIES
   factory_girl_rails
   faker
   httparty
+  newrelic_rpm
   nokogiri
   pg
   pry-rails
