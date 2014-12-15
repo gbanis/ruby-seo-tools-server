@@ -14,6 +14,8 @@ gem 'nokogiri'
 
 gem 'newrelic_rpm'
 
+gem "codeclimate-test-reporter", group: :test, require: nil
+
 group :development, :test do
   gem 'dotenv-rails'
   gem 'spring'
@@ -21,5 +23,4 @@ group :development, :test do
   gem 'rspec-rails', '3.1.0'
   gem 'factory_girl_rails'
   gem 'faker'
-  gem "codeclimate-test-reporter"
 end
