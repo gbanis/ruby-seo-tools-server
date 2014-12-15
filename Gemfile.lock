@@ -36,7 +36,7 @@ GEM
       minitest (~> 5.1)
       thread_safe (~> 0.1)
       tzinfo (~> 1.1)
-    arel (6.0.0.beta2)
+    arel (6.0.0)
     builder (3.2.2)
     codeclimate-test-reporter (0.4.3)
       simplecov (>= 0.7.1, < 1.0.0)
@@ -155,7 +155,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  arel (= 6.0.0.beta2)
+  arel
   codeclimate-test-reporter
   dotenv
   dotenv-rails
