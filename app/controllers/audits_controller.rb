@@ -2,11 +2,12 @@ class AuditsController < ApplicationController
   def create
     @audit = Audit.new(audit_params)
     @audit.generate
-    render json: @audit
+    render json: @audit, except: [:raw_html]
   end
 
   def index
-    render json: Audit.all.last
+    @last_audit = Audit.all.last
+    render json: @last_audit, except: [:raw_html]
   end
 
   private
