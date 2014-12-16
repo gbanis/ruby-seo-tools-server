@@ -31,7 +31,7 @@ module Analyzer
 
   def meta_description_good_length!
     length = self.meta_description.length
-    self.meta_description_good_length = length > 130 && length < 156
+    self.meta_description_good_length = length > 130 && length < 160
   end
 
   def meta_description_contains_keyword!
