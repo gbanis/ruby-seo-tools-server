@@ -14,6 +14,8 @@ gem 'nokogiri'
 
 gem 'newrelic_rpm'
 
+gem 'rails_12factor', group: :production # Heroku
+
 gem "codeclimate-test-reporter", group: :test, require: nil
 
 gem 'rack-cors', require: 'rack/cors'
