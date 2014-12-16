@@ -4,7 +4,10 @@
 [![Code Climate](https://img.shields.io/codeclimate/github/gbanis/ruby-seo-tools-server.svg?style=flat-square)](https://codeclimate.com/github/gbanis/ruby-seo-tools-server)
 [![Test Coverage](https://img.shields.io/codeclimate/coverage/github/gbanis/ruby-seo-tools-server.svg?style=flat-square)](https://codeclimate.com/github/gbanis/ruby-seo-tools-server)
 [![Dependency Status](https://img.shields.io/gemnasium/gbanis/ruby-seo-tools-server.svg?style=flat-square)](https://gemnasium.com/gbanis/ruby-seo-tools-server)
+[![Releases](https://img.shields.io/github/release/gbanis/ruby-seo-tools-server.svg?style=flat-square)](https://github.com/gbanis/ruby-seo-tools-server/releases)
 
 
 Currently deployed at: api.rubyseotools.com
+
+
 
