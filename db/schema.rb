@@ -29,7 +29,7 @@ ActiveRecord::Schema.define(version: 20141217162400) do
     t.boolean "meta_description_contains_keyword"
     t.text    "raw_html"
     t.text    "body_text"
-    t.decimal "body_text_flesh_score"
+    t.decimal "body_text_flesch_score"
     t.boolean "body_text_flesch_score_good"
   end
 
