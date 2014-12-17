@@ -48,7 +48,7 @@ RSpec.describe Audit, type: :model do
         end
 
         it "sets the correct body_text_flesch_score" do
-          expect(@audit.body_text_flesch_score.round(1)).to eq 59.9
+          expect(@audit.body_text_flesch_score).to eq 59.87
         end
 
         it "sets the correct body_text_flesch_score_good" do

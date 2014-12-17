@@ -6,7 +6,7 @@ class Description < ActiveRecord::Base
       title_good_length: "Title is between 40 and 60 characters",
       title_contains_keyword: "Title contains keyword",
       meta_description_good_length: "Meta description is between 130 and 160 characters",
-      meta_description_contains_keyword: "Meta description contains keyword"
+      meta_description_contains_keyword: "Meta description contains keyword",
       body_text_flesch_score_good: "Flesch reading ease score of your content is over 60"
     }
   end
