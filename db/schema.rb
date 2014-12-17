@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141217162400) do
+ActiveRecord::Schema.define(version: 20141217200105) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -29,8 +29,14 @@ ActiveRecord::Schema.define(version: 20141217162400) do
     t.boolean "meta_description_contains_keyword"
     t.text    "raw_html"
     t.text    "body_text"
-    t.decimal "body_text_flesch_score",            precision: 5, scale: 2
+    t.decimal "body_text_flesch_score",                precision: 5, scale: 2
     t.boolean "body_text_flesch_score_good"
+    t.integer "body_text_num_words"
+    t.integer "body_text_num_keyword_occurences"
+    t.decimal "body_text_keyword_density",             precision: 5, scale: 4
+    t.boolean "body_text_num_words_good"
+    t.boolean "body_text_num_keyword_occurences_good"
+    t.boolean "body_text_keyword_density_good"
   end
 
 end
