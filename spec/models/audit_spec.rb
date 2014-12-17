@@ -54,6 +54,19 @@ RSpec.describe Audit, type: :model do
         it "sets the correct body_text_flesch_score_good" do
           expect(@audit.body_text_flesch_score_good).to be_falsy
         end
+
+        it "sets the correct body_text_num_words" do
+          expect(@audit.body_text_num_words).to eq 1143
+        end
+
+        it "sets the correct body_text_num_keyword_occurences" do
+          expect(@audit.body_text_num_keyword_occurences).to eq 7
+        end
+
+        it "body_text_keyword_density" do
+          density = @audit.body_text_num_keyword_occurences / @audit.body_text_num_words.to_f
+          expect(@audit.body_text_keyword_density).to eq density.round(4)
+        end
       end
 
     end

@@ -10,6 +10,9 @@ module Analyzer
     meta_description_contains_keyword!
     body_text_flesch_score!
     body_text_flesch_score_good!
+    body_text_num_words!
+    body_text_num_keyword_occurences!
+    body_text_keyword_density!
   end
 
   def path_contains_keyword!
@@ -47,4 +50,18 @@ module Analyzer
   def body_text_flesch_score_good!
     self.body_text_flesch_score_good = self.body_text_flesch_score > 60
   end
+
+  def body_text_num_words!
+    self.body_text_num_words = Lingua::EN::Readability.new(self.body_text).num_words
+  end
+
+  def body_text_num_keyword_occurences!
+    self.body_text_num_keyword_occurences = self.body_text.downcase.scan(self.keyword.downcase).length
+  end
+
+  def body_text_keyword_density!
+    density = self.body_text_num_keyword_occurences / self.body_text_num_words.to_f
+    self.body_text_keyword_density = density.round(4)
+  end
+
 end
