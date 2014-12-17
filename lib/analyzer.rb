@@ -13,6 +13,9 @@ module Analyzer
     body_text_num_words!
     body_text_num_keyword_occurences!
     body_text_keyword_density!
+    body_text_num_words_good!
+    body_text_num_keyword_occurences_good!
+    body_text_keyword_density_good!
   end
 
   def path_contains_keyword!
@@ -60,8 +63,27 @@ module Analyzer
   end
 
   def body_text_keyword_density!
-    density = self.body_text_num_keyword_occurences / self.body_text_num_words.to_f
+    density = self.body_text_num_keyword_occurences * self.keyword_length / self.body_text_num_words.to_f
     self.body_text_keyword_density = density.round(4)
   end
 
+  # add_column :audits, :body_text_num_words_good, :boolean
+  # add_column :audits, :body_text_num_keyword_occurences_good, :boolean
+  # add_column :audits, :body_text_keyword_density_good, :boolean
+
+  def body_text_num_words_good!
+    self.body_text_num_words_good = self.body_text_num_words > 350
+  end
+
+  def body_text_num_keyword_occurences_good!
+    self.body_text_num_keyword_occurences_good = self.body_text_num_keyword_occurences > 5
+  end
+
+  def body_text_keyword_density_good!
+    self.body_text_keyword_density_good = self.body_text_keyword_density > 0.01 && self.body_text_keyword_density < 0.06
+  end
+
+  def keyword_length
+    self.keyword.split(" ").length
+  end
 end
