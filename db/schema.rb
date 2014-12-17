@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141213155400) do
+ActiveRecord::Schema.define(version: 20141217162400) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -28,6 +28,9 @@ ActiveRecord::Schema.define(version: 20141213155400) do
     t.boolean "meta_description_good_length"
     t.boolean "meta_description_contains_keyword"
     t.text    "raw_html"
+    t.text    "body_text"
+    t.decimal "body_text_flesh_score"
+    t.boolean "body_text_flesch_score_good"
   end
 
 end
