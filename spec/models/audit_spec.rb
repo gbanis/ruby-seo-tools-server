@@ -46,6 +46,14 @@ RSpec.describe Audit, type: :model do
         it "sets the correct meta_description_contains_keyword" do
           expect(@audit.meta_description_contains_keyword).to be_truthy
         end
+
+        it "sets the correct body_text_flesch_score" do
+          expect(@audit.body_text_flesch_score.round(1)).to eq 59.9
+        end
+
+        it "sets the correct body_text_flesch_score_good" do
+          expect(@audit.body_text_flesch_score_good).to be_falsy
+        end
       end
 
     end

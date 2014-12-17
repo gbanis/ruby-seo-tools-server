@@ -8,6 +8,8 @@ module Analyzer
     title_contains_keyword!
     meta_description_good_length!
     meta_description_contains_keyword!
+    body_text_flesch_score!
+    body_text_flesch_score_good!
   end
 
   def path_contains_keyword!
@@ -36,5 +38,13 @@ module Analyzer
 
   def meta_description_contains_keyword!
      self.meta_description_contains_keyword = self.meta_description.downcase.include? self.keyword.downcase
+  end
+
+  def body_text_flesch_score!
+    self.body_text_flesch_score = Lingua::EN::Readability.new(self.body_text).flesch.round(2)
+  end
+
+  def body_text_flesch_score_good!
+    self.body_text_flesch_score_good = self.body_text_flesch_score > 60
   end
 end
