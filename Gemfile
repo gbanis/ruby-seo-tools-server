@@ -11,6 +11,7 @@ gem 'arel', '6.0.0.beta2' # Using this because of problem with migration. More i
 
 gem 'httparty'
 gem 'nokogiri'
+gem 'lingua'
 
 gem 'newrelic_rpm'
 

@@ -62,6 +62,7 @@ GEM
       multi_xml (>= 0.5.2)
     i18n (0.7.0.beta1)
     json (1.8.1)
+    lingua (0.6.2)
     loofah (2.0.1)
       nokogiri (>= 1.5.9)
     mail (2.6.3)
@@ -168,6 +169,7 @@ DEPENDENCIES
   factory_girl_rails
   faker
   httparty
+  lingua
   newrelic_rpm
   nokogiri
   pg
