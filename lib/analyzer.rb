@@ -67,10 +67,6 @@ module Analyzer
     self.body_text_keyword_density = density.round(4)
   end
 
-  # add_column :audits, :body_text_num_words_good, :boolean
-  # add_column :audits, :body_text_num_keyword_occurences_good, :boolean
-  # add_column :audits, :body_text_keyword_density_good, :boolean
-
   def body_text_num_words_good!
     self.body_text_num_words_good = self.body_text_num_words > 350
   end
