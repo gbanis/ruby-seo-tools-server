@@ -13,6 +13,7 @@ class Audit < ActiveRecord::Base
   def set_data
     self.title = @parsed_html.title
     self.meta_description = @parsed_html.xpath("//meta[@name='description']/@content").first.value
+    self.body_text = @parsed_html.css('body').text
   end
 
   def set_raw_html
